@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | Sugar, Focus on Android, Java, LeetCode</title>
+    <title>LeetCode 1. Two Sum | Sugar, Focus on Android, Java, LeetCode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Sugar">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have ex">
     
     
     
@@ -71,15 +72,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/10/20/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2017/10/20/LeetCode 1. Two Sum/" title="LeetCode 1. Two Sum" itemprop="url">LeetCode 1. Two Sum</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="Sugar">Sugar</a>
     </p>
   <p class="article-time">
-    <time datetime="2017-10-21T01:08:27.293Z" itemprop="datePublished">2017-10-20</time>
-    Updated:<time datetime="2017-10-21T01:08:27.293Z" itemprop="dateModified">2017-10-20</time>
+    <time datetime="2017-10-21T04:56:54.000Z" itemprop="datePublished">2017-10-20</time>
+    Updated:<time datetime="2017-10-21T05:09:16.873Z" itemprop="dateModified">2017-10-20</time>
     
   </p>
 </header>
@@ -88,28 +89,28 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		
 		</div>
 		
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-  
+		<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>Example:<br>Given nums = [2, 7, 11, 15], target = 9,</p>
+<p>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</div><div class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (map.containsKey(target - nums[i])) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(target - nums[i]), i&#125;;</div><div class="line">        &#125;</div><div class="line">        map.put(nums[i], i);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, - <span class="number">1</span>&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>  
 	</div>
 		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/LeetCode/">LeetCode</a>
+  </div>
 
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2017/10/20/hello-world/" data-title="Hello World | Sugar, Focus on Android, Java, LeetCode" data-tsina="" class="share clearfix">
+  <div data-url="http://yoursite.com/2017/10/20/LeetCode 1. Two Sum/" data-title="LeetCode 1. Two Sum | Sugar, Focus on Android, Java, LeetCode" data-tsina="" class="share clearfix">
   </div>
 
 </div>
@@ -118,14 +119,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/10/20/LeetCode 1. Two Sum/" title="LeetCode 1. Two Sum">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  LeetCode 1. Two Sum</span>
+
+<div class="next">
+<a href="/2017/10/20/hello-world/"  title="Hello World">
+ <strong>NEXT:</strong><br/> 
+ <span>Hello World
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -139,7 +140,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  
   </div>
 
 <div id="asidepart">
