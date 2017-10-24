@@ -194,7 +194,7 @@ th {
 }
 body {
   position: relative;
-  font-family: 'Helvetica Neue', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Content sans serif font', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 2;
   color: #555;
@@ -225,7 +225,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Helvetica Neue', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Content sans serif font', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 h2,
 h3,
@@ -1140,7 +1140,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Helvetica Neue', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Content sans serif font', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1229,7 +1229,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: 'Helvetica Neue', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Content sans serif font', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1507,7 +1507,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: 'Helvetica Neue', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Content sans serif font', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -1952,7 +1952,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #25a782;
+  background: #b68a4e;
 }
 .links-of-blogroll {
   font-size: 13px;
