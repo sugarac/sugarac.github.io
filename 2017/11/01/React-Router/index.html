@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
-<meta name="keywords" content="LeetCode">
+<meta name="description" content="Router就是React的一个组件，它并不会被渲染，只是一个创建内部路由规则的配置对象，根据匹配的路由地址展现相应的组件。Route则对路由地址和组件进行绑定，Route具有嵌套功能，表示路由地址的包涵关系，这和组件之间的嵌套并没有直接联系。">
+<meta name="keywords" content="React,React-Router">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 1. Two Sum">
-<meta property="og:url" content="http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/index.html">
+<meta property="og:title" content="React-Router">
+<meta property="og:url" content="http://sugarac.com/2017/11/01/React-Router/index.html">
 <meta property="og:site_name" content="sugar, Focus on Frontend, Android">
-<meta property="og:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
+<meta property="og:description" content="Router就是React的一个组件，它并不会被渲染，只是一个创建内部路由规则的配置对象，根据匹配的路由地址展现相应的组件。Route则对路由地址和组件进行绑定，Route具有嵌套功能，表示路由地址的包涵关系，这和组件之间的嵌套并没有直接联系。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-31T03:01:53.632Z">
+<meta property="og:updated_time" content="2017-12-31T05:29:22.715Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 1. Two Sum">
-<meta name="twitter:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
+<meta name="twitter:title" content="React-Router">
+<meta name="twitter:description" content="Router就是React的一个组件，它并不会被渲染，只是一个创建内部路由规则的配置对象，根据匹配的路由地址展现相应的组件。Route则对路由地址和组件进行绑定，Route具有嵌套功能，表示路由地址的包涵关系，这和组件之间的嵌套并没有直接联系。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>LeetCode 1. Two Sum | sugar, Focus on Frontend, Android</title>
+<title>React-Router | sugar, Focus on Frontend, Android</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -254,11 +254,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-LeetCode 1. Two Sum" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-React-Router" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/08/LeetCode 1. Two Sum/" class="article-date">
-      <time datetime="2017-07-08T07:00:00.000Z" itemprop="datePublished">2017-07-08</time>
+      <a href="/2017/11/01/React-Router/" class="article-date">
+      <time datetime="2017-11-02T01:57:49.000Z" itemprop="datePublished">2017-11-01</time>
 </a>
 
 
@@ -273,7 +273,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode 1. Two Sum
+      React-Router
     </h1>
   
 
@@ -284,7 +284,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Router/">React-Router</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -294,13 +294,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
-<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the same element twice.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,</div><div class="line"></div><div class="line">Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,</div><div class="line">return [<span class="number">0</span>, <span class="number">1</span>].</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="Solution-1-HashMap-O-n-O-n"><a href="#Solution-1-HashMap-O-n-O-n" class="headerlink" title="Solution 1: HashMap O(n); O(n)"></a>Solution 1: HashMap O(n); O(n)</h3><p>Build a HashMap between number and its index.<br>For each number n in the array, check if target - n exists in map.<br>If exists, return the indices, otherwise, put n and its index into map.<br>Return {-1, -1} if not found.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</div><div class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (map.containsKey(target - nums[i])) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(target - nums[i]), i&#125;;</div><div class="line">        &#125;</div><div class="line">        map.put(nums[i], i);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, - <span class="number">1</span>&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+        <p>Router就是React的一个组件，它并不会被渲染，只是一个创建内部路由规则的配置对象，根据匹配的路由地址展现相应的组件。Route则对路由地址和组件进行绑定，Route具有嵌套功能，表示路由地址的包涵关系，这和组件之间的嵌套并没有直接联系。<br><a id="more"></a><br>Route可以向绑定的组件传递7个属性：children，history，location，params，route，routeParams，routes，每个属性都包涵路由的相关的信息。比较常用的有children（以路由的包涵关系为区分的组件），location（包括地址，参数，地址切换方式，key值，hash值）。react-router提供Link标签，这只是对a标签的封装，值得注意的是，点击链接进行的跳转并不是默认的方式，react-router阻止了a标签的默认行为并用pushState进行hash值的转变。切换页面的过程是在点击Link标签或者后退前进按钮时，会先发生url地址的转变，Router监听到地址的改变根据Route的path属性匹配到对应的组件，将state值改成对应的组件并调用setState触发render函数重新渲染dom。</p>
+<p>当页面比较多时，项目就会变得越来越大，尤其对于单页面应用来说，初次渲染的速度就会很慢，这时候就需要按需加载，只有切换到页面的时候才去加载对应的js文件。react配合webpack进行按需加载的方法很简单，Route的component改为getComponent，组件用require.ensure的方式获取，并在webpack中配置chunkFilename。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> chooseProducts = <span class="function">(<span class="params">location, cb</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        cb(<span class="literal">null</span>, <span class="built_in">require</span>(<span class="string">'../Component/chooseProducts'</span>).default)</div><div class="line">    &#125;,<span class="string">'chooseProducts'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> helpCenter = <span class="function">(<span class="params">location, cb</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        cb(<span class="literal">null</span>, <span class="built_in">require</span>(<span class="string">'../Component/helpCenter'</span>).default)</div><div class="line">    &#125;,<span class="string">'helpCenter'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> saleRecord = <span class="function">(<span class="params">location, cb</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        cb(<span class="literal">null</span>, <span class="built_in">require</span>(<span class="string">'../Component/saleRecord'</span>).default)</div><div class="line">    &#125;,<span class="string">'saleRecord'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> RouteConfig = (</div><div class="line">    &lt;Router history=&#123;history&#125;&gt;</div><div class="line">        &lt;Route path=<span class="string">"/"</span> component=&#123;Roots&#125;&gt;</div><div class="line">            &lt;IndexRoute component=&#123;index&#125; /&gt;<span class="comment">//首页</span></div><div class="line">            &lt;Route path=<span class="string">"index"</span> component=&#123;index&#125; /&gt;</div><div class="line">            &lt;Route path=<span class="string">"helpCenter"</span> getComponent=&#123;helpCenter&#125; /&gt;<span class="comment">//帮助中心</span></div><div class="line">            &lt;Route path=<span class="string">"saleRecord"</span> getComponent=&#123;saleRecord&#125; /&gt;<span class="comment">//销售记录</span></div><div class="line">            &lt;Redirect <span class="keyword">from</span>=<span class="string">'*'</span> to=<span class="string">'/'</span>  /&gt;</div><div class="line">        &lt;<span class="regexp">/Route&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>Router&gt;</div><div class="line">);</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -308,13 +304,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2017/07/08/LeetCode 1. Two Sum/">LeetCode 1. Two Sum</a></p>
+        <p><span>Title:</span><a href="/2017/11/01/React-Router/">React-Router</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">sugar</a></p>
-        <p><span>Created:</span>2017-07-08, 00:00:00</p>
-        <p><span>Updated:</span>2017-12-30, 19:01:53</p>
+        <p><span>Created:</span>2017-11-01, 18:57:49</p>
+        <p><span>Updated:</span>2017-12-30, 21:29:22</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/07/08/LeetCode 1. Two Sum/" title="LeetCode 1. Two Sum">http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/</a>
-            <span class="copy-path" data-clipboard-text="From http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/　　By sugar" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/11/01/React-Router/" title="React-Router">http://sugarac.com/2017/11/01/React-Router/</a>
+            <span class="copy-path" data-clipboard-text="From http://sugarac.com/2017/11/01/React-Router/　　By sugar" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -327,11 +323,17 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/11/04/Redux/">
+                    Redux
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
                 <a href="/2017/10/30/React-Summary/">
                     React Summary
                 </a>
             </div>
-        
         
     </nav>
 
@@ -341,7 +343,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Solution-1-HashMap-O-n-O-n"><span class="toc-number">1.</span> <span class="toc-text">Solution 1: HashMap O(n); O(n)</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -377,7 +379,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"LeetCode 1. Two Sum　| sugar, Focus on Frontend, Android　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"React-Router　| sugar, Focus on Frontend, Android　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -396,8 +398,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/';
-            this.page.identifier = '2017/07/08/LeetCode 1. Two Sum/';
+            this.page.url = 'http://sugarac.com/2017/11/01/React-Router/';
+            this.page.identifier = '2017/11/01/React-Router/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -419,7 +421,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/10/30/React-Summary/" title="Pre: React Summary">
+            <a href="/2017/11/04/Redux/" title="Pre: Redux">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -427,7 +429,9 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2017/10/30/React-Summary/" title="Next: React Summary">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 

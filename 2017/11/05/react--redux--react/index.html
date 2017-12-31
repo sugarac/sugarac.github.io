@@ -15,18 +15,20 @@
 
 
 
-<meta name="description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
-<meta name="keywords" content="LeetCode">
+<meta name="description" content="下面是一个完整的 react -&amp;gt; redux -&amp;gt; react 流程：">
+<meta name="keywords" content="React,Redux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 1. Two Sum">
-<meta property="og:url" content="http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/index.html">
+<meta property="og:title" content="react -&gt; redux -&gt; react">
+<meta property="og:url" content="http://sugarac.com/2017/11/05/react--redux--react/index.html">
 <meta property="og:site_name" content="sugar, Focus on Frontend, Android">
-<meta property="og:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
+<meta property="og:description" content="下面是一个完整的 react -&amp;gt; redux -&amp;gt; react 流程：">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-31T03:01:53.632Z">
+<meta property="og:image" content="http://sugarac.com/img/react_props.png">
+<meta property="og:updated_time" content="2017-12-31T05:30:00.242Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 1. Two Sum">
-<meta name="twitter:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
+<meta name="twitter:title" content="react -&gt; redux -&gt; react">
+<meta name="twitter:description" content="下面是一个完整的 react -&amp;gt; redux -&amp;gt; react 流程：">
+<meta name="twitter:image" content="http://sugarac.com/img/react_props.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +60,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>LeetCode 1. Two Sum | sugar, Focus on Frontend, Android</title>
+<title>react -&gt; redux -&gt; react | sugar, Focus on Frontend, Android</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -254,11 +256,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-LeetCode 1. Two Sum" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-react--redux--react" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/08/LeetCode 1. Two Sum/" class="article-date">
-      <time datetime="2017-07-08T07:00:00.000Z" itemprop="datePublished">2017-07-08</time>
+      <a href="/2017/11/05/react--redux--react/" class="article-date">
+      <time datetime="2017-11-06T03:19:32.000Z" itemprop="datePublished">2017-11-05</time>
 </a>
 
 
@@ -273,7 +275,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode 1. Two Sum
+      react -&gt; redux -&gt; react
     </h1>
   
 
@@ -284,7 +286,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redux/">Redux</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -294,12 +296,29 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
-<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the same element twice.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,</div><div class="line"></div><div class="line">Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,</div><div class="line">return [<span class="number">0</span>, <span class="number">1</span>].</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="Solution-1-HashMap-O-n-O-n"><a href="#Solution-1-HashMap-O-n-O-n" class="headerlink" title="Solution 1: HashMap O(n); O(n)"></a>Solution 1: HashMap O(n); O(n)</h3><p>Build a HashMap between number and its index.<br>For each number n in the array, check if target - n exists in map.<br>If exists, return the indices, otherwise, put n and its index into map.<br>Return {-1, -1} if not found.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</div><div class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (map.containsKey(target - nums[i])) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(target - nums[i]), i&#125;;</div><div class="line">        &#125;</div><div class="line">        map.put(nums[i], i);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, - <span class="number">1</span>&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p>下面是一个完整的 react -&gt; redux -&gt; react 流程：<br><a id="more"></a></p>
+<p>一、Provider组件接受redux的store作为props，然后通过context往下传。</p>
+<p>二、connect函数在初始化的时候会将mapDispatchToProps对象绑定到store，如果mapDispatchToProps是函数则在Connect组件获得store后，根据传入的store.dispatch和action通过bindActionCreators进行绑定，再将返回的对象绑定到store，connect函数会返回一个wrapWithConnect函数，同时wrapWithConnect会被调用且传入一个ui组件，wrapWithConnect内部使用class Connect extends Component定义了一个Connect组件，传入的ui组件就是Connect的子组件，然后Connect组件会通过context获得store，并通过store.getState获得完整的state对象，将state传入mapStateToProps返回stateProps对象、mapDispatchToProps对象或mapDispatchToProps函数会返回一个dispatchProps对象，stateProps、dispatchProps以及Connect组件的props三者通过Object.assign()，或者mergeProps合并为props传入ui组件。然后在ComponentDidMount中调用store.subscribe，注册了一个回调函数handleChange监听state的变化。</p>
+<p>三、此时ui组件就可以在props中找到actionCreator，当我们调用actionCreator时会自动调用dispatch，在dispatch中会调用getState获取整个state，同时注册一个listener监听state的变化，store将获得的state和action传给combineReducers，combineReducers会将state依据state的key值分别传给子reducer，并将action传给全部子reducer，reducer会被依次执行进行action.type的判断，如果有则返回一个新的state，如果没有则返回默认。combineReducers再次将子reducer返回的单个state进行合并成一个新的完整的state。此时state发生了变化。dispatch在state返回新的值之后会调用所有注册的listener函数其中包括handleChange函数，handleChange函数内部首先调用getState获取新的state值并对新旧两个state进行浅对比，如果相同直接return，如果不同则调用mapStateToProps获取stateProps并将新旧两个stateProps进行浅对比，如果相同，直接return结束，不进行后续操作。如果不相同则调用this.setState()触发Connect组件的更新，传入ui组件，触发ui组件的更新，此时ui组件获得新的props，react –&gt; redux –&gt; react 的一次流程结束。</p>
+<p><strong>上面的有点复杂，简化版的流程是：</strong></p>
+<p>一、Provider组件接受redux的store作为props，然后通过context往下传。</p>
+<p>二、connect函数收到Provider传出的store，然后接受三个参数mapStateToProps，mapDispatchToProps和组件，并将state和actionCreator以props传入组件，这时组件就可以调用actionCreator函数来触发reducer函数返回新的state，connect监听到state变化调用setState更新组件并将新的state传入组件。</p>
+<p>connect可以写的非常简洁，mapStateToProps，mapDispatchToProps只不过是传入的回调函数，connect函数在必要的时候会调用它们，名字不是固定的，甚至可以不写名字。</p>
+<p>简化版本：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">connect(<span class="function"><span class="params">state</span> =&gt;</span> state, action)(Component);</div></pre></td></tr></table></figure></p>
+<h2 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h2><p>上面说了react，react-router和redux的知识点。但是怎么样将它们整合起来，搭建一个完整的项目。</p>
+<p>1、先引用 react.js，redux，react-router 等基本文件，建议用npm安装，直接在文件中引用。</p>
+<p>2、从 react.js，redux，react-router 中引入所需要的对象和方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123;Component, PropTypes&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> ReactDOM, &#123;render&#125; <span class="keyword">from</span> <span class="string">'react-dom'</span>;</div><div class="line"><span class="keyword">import</span> &#123;Provider, connect&#125; <span class="keyword">from</span> <span class="string">'react-redux'</span>;</div><div class="line"><span class="keyword">import</span> &#123;createStore, combineReducers, applyMiddleware&#125; <span class="keyword">from</span> <span class="string">'redux'</span>;</div><div class="line"><span class="keyword">import</span> &#123; Router, Route, Redirect, IndexRoute, browserHistory, hashHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</div></pre></td></tr></table></figure></p>
+<p>3、根据需求创建顶层ui组件，每个顶层ui组件对应一个页面。</p>
+<p>4、创建actionCreators和reducers，并用combineReducers将所有的reducer合并成一个大的reduer。利用createStore创建store并引入combineReducers和applyMiddleware。</p>
+<p>5、利用connect将actionCreator，reuder和顶层的ui组件进行关联并返回一个新的组件。</p>
+<p>6、利用connect返回的新的组件配合react-router进行路由的部署，返回一个路由组件Router。</p>
+<p>7、将Router放入最顶层组件Provider，引入store作为Provider的属性。</p>
+<p>8、调用render渲染Provider组件且放入页面的标签中。</p>
+<p>可以看到顶层的ui组件其实被套了四层组件，Provider，Router，Route，Connect，这四个组件并不会在视图上改变react，它们只是功能性的。</p>
+<p>通常我们在顶层的ui组件打印props时可以看到一堆属性：</p>
+<p><img src="/img/react_props.png" alt="react_props.png" width="400" align="center"></p>
+<p>上图的顶层ui组件属性总共有18个，如果刚刚接触react，可能对这些属性怎么来的感到困惑，其实这些属性来自五个地方：</p>
+<p>组件自定义属性1个，actionCreator返回的对象6个，reducer返回的state4个，Connect组件属性0个，以及Router注入的属性7个。</p>
 
       
     </div>
@@ -308,13 +327,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2017/07/08/LeetCode 1. Two Sum/">LeetCode 1. Two Sum</a></p>
+        <p><span>Title:</span><a href="/2017/11/05/react--redux--react/">react -&gt; redux -&gt; react</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">sugar</a></p>
-        <p><span>Created:</span>2017-07-08, 00:00:00</p>
-        <p><span>Updated:</span>2017-12-30, 19:01:53</p>
+        <p><span>Created:</span>2017-11-05, 19:19:32</p>
+        <p><span>Updated:</span>2017-12-30, 21:30:00</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/07/08/LeetCode 1. Two Sum/" title="LeetCode 1. Two Sum">http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/</a>
-            <span class="copy-path" data-clipboard-text="From http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/　　By sugar" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/11/05/react--redux--react/" title="react -&gt; redux -&gt; react">http://sugarac.com/2017/11/05/react--redux--react/</a>
+            <span class="copy-path" data-clipboard-text="From http://sugarac.com/2017/11/05/react--redux--react/　　By sugar" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -327,11 +346,17 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/10/30/React-Summary/">
-                    React Summary
+                <a href="/2017/11/07/react-lifecycle/">
+                    React Lifecycle
                 </a>
             </div>
         
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/11/04/Redux/">
+                    Redux
+                </a>
+            </div>
         
     </nav>
 
@@ -341,7 +366,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Solution-1-HashMap-O-n-O-n"><span class="toc-number">1.</span> <span class="toc-text">Solution 1: HashMap O(n); O(n)</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目搭建"><span class="toc-number">1.</span> <span class="toc-text">项目搭建</span></a></li></ol>
         
     </div>
     <style>
@@ -377,7 +402,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"LeetCode 1. Two Sum　| sugar, Focus on Frontend, Android　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"react -> redux -> react　| sugar, Focus on Frontend, Android　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -396,8 +421,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/';
-            this.page.identifier = '2017/07/08/LeetCode 1. Two Sum/';
+            this.page.url = 'http://sugarac.com/2017/11/05/react--redux--react/';
+            this.page.identifier = '2017/11/05/react--redux--react/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -419,7 +444,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/10/30/React-Summary/" title="Pre: React Summary">
+            <a href="/2017/11/07/react-lifecycle/" title="Pre: React Lifecycle">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -427,7 +452,9 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2017/11/04/Redux/" title="Next: Redux">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
