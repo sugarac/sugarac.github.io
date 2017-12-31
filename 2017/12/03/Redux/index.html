@@ -15,17 +15,21 @@
 
 
 
-<meta name="keywords" content="React">
+<meta name="description" content="首先，redux并不是必须的，它的作用相当于在顶层组件之上又加了一个组件，作用是进行逻辑运算、储存数据和实现组件尤其是顶层组件的通信。如果组件之间的交流不多，逻辑不复杂，只是单纯的进行视图的渲染，这时候用回调，context就行，没必要用redux，用了反而影响开发速度。但是如果组件交流特别频繁，逻辑很复杂，那redux的优势就特别明显了。我第一次做react项目的时候并没有用redux，所有的逻">
+<meta name="keywords" content="React,Redux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React Lifecycle">
-<meta property="og:url" content="http://sugarac.com/2017/10/21/react-lifecycle/index.html">
+<meta property="og:title" content="Redux">
+<meta property="og:url" content="http://sugarac.com/2017/12/03/Redux/index.html">
 <meta property="og:site_name" content="sugar, Focus on Frontend，Android">
+<meta property="og:description" content="首先，redux并不是必须的，它的作用相当于在顶层组件之上又加了一个组件，作用是进行逻辑运算、储存数据和实现组件尤其是顶层组件的通信。如果组件之间的交流不多，逻辑不复杂，只是单纯的进行视图的渲染，这时候用回调，context就行，没必要用redux，用了反而影响开发速度。但是如果组件交流特别频繁，逻辑很复杂，那redux的优势就特别明显了。我第一次做react项目的时候并没有用redux，所有的逻">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://sugarac.com/img/react-lifecycle.png">
-<meta property="og:updated_time" content="2017-12-31T02:53:47.808Z">
+<meta property="og:image" content="http://sugarac.com/img/redux-flow.jpg">
+<meta property="og:image" content="http://sugarac.com/img/redux.png">
+<meta property="og:updated_time" content="2017-12-31T03:37:58.823Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React Lifecycle">
-<meta name="twitter:image" content="http://sugarac.com/img/react-lifecycle.png">
+<meta name="twitter:title" content="Redux">
+<meta name="twitter:description" content="首先，redux并不是必须的，它的作用相当于在顶层组件之上又加了一个组件，作用是进行逻辑运算、储存数据和实现组件尤其是顶层组件的通信。如果组件之间的交流不多，逻辑不复杂，只是单纯的进行视图的渲染，这时候用回调，context就行，没必要用redux，用了反而影响开发速度。但是如果组件交流特别频繁，逻辑很复杂，那redux的优势就特别明显了。我第一次做react项目的时候并没有用redux，所有的逻">
+<meta name="twitter:image" content="http://sugarac.com/img/redux-flow.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>React Lifecycle | sugar, Focus on Frontend，Android</title>
+<title>Redux | sugar, Focus on Frontend，Android</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -295,11 +299,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-react-lifecycle" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Redux" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/10/21/react-lifecycle/" class="article-date">
-      <time datetime="2017-10-22T04:56:54.000Z" itemprop="datePublished">2017-10-21</time>
+      <a href="/2017/12/03/Redux/" class="article-date">
+      <time datetime="2017-12-04T03:05:19.000Z" itemprop="datePublished">2017-12-03</time>
 </a>
 
 
@@ -314,7 +318,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      React Lifecycle
+      Redux
     </h1>
   
 
@@ -325,7 +329,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redux/">Redux</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -335,56 +339,79 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><img src="/img/react-lifecycle.png" alt="react-lifecycle.png" width="400" align="center"></p>
+        <p>首先，redux并不是必须的，它的作用相当于在顶层组件之上又加了一个组件，作用是进行逻辑运算、储存数据和实现组件尤其是顶层组件的通信。如果组件之间的交流不多，逻辑不复杂，只是单纯的进行视图的渲染，这时候用回调，context就行，没必要用redux，用了反而影响开发速度。但是如果组件交流特别频繁，逻辑很复杂，那redux的优势就特别明显了。我第一次做react项目的时候并没有用redux，所有的逻辑都是在组件内部实现，当时为了实现一个逻辑比较复杂的购物车，洋洋洒洒居然写了800多行代码，回头一看我自己都不知道写的是啥，画面太感人。</p>
 <a id="more"></a>
-<p><strong>组件在初始化时会触发5个钩子函数：</strong></p>
-<p>  <strong>1、getDefaultProps()</strong></p>
+<p>先简单说一下redux和react是怎么配合的。react-redux提供了connect和Provider两个好基友，它们一个将组件与redux关联起来，一个将store传给组件。组件通过dispatch发出action，store根据action的type属性调用对应的reducer并传入state和这个action，reducer对state进行处理并返回一个新的state放入store，connect监听到store发生变化，调用setState更新组件，此时组件的props也就跟着变化。</p>
+<h4 id="流程是这个样子的："><a href="#流程是这个样子的：" class="headerlink" title="流程是这个样子的："></a>流程是这个样子的：</h4><p><img src="/img/redux-flow.jpg" alt="redux-flow.jpg" width="400" align="center"><br>值得注意的是connect，Provider，mapStateToProps,mapDispatchToProps是react-redux提供的，redux本身和react没有半毛钱关系，它只是数据处理中心，没有和react产生任何耦合，是react-redux让它们联系在一起。</p>
+<h4 id="接下来具体分析一下，redux以及react-redux到底是怎么实现的。"><a href="#接下来具体分析一下，redux以及react-redux到底是怎么实现的。" class="headerlink" title="接下来具体分析一下，redux以及react-redux到底是怎么实现的。"></a>接下来具体分析一下，redux以及react-redux到底是怎么实现的。</h4><p>先上一张图</p>
+<p><img src="/img/redux.png" alt="redux.png" width="400" align="center"></p>
+<p>明显比第一张要复杂，其实两张图说的是同一件事。从上而下慢慢分析：</p>
+<h3 id="先说说redux："><a href="#先说说redux：" class="headerlink" title="先说说redux："></a>先说说redux：</h3><h4 id="redux主要由三部分组成：store，reducer，action。"><a href="#redux主要由三部分组成：store，reducer，action。" class="headerlink" title="redux主要由三部分组成：store，reducer，action。"></a>redux主要由三部分组成：store，reducer，action。</h4><p><strong>store</strong>是一个对象，它有四个主要的方法：</p>
+<p><strong>1、dispatch:</strong></p>
 <blockquote>
-<p>设置默认的props，也可以用dufaultProps设置组件的默认属性。</p>
+<p> 用于action的分发——在createStore中可以用middleware中间件对dispatch进行改造，比如当action传入dispatch会立即触发reducer，有些时候我们不希望它立即触发，而是等待异步操作完成之后再触发，这时候用redux-thunk对dispatch进行改造，以前只能传入一个对象，改造完成后可以传入一个函数，在这个函数里我们手动dispatch一个action对象，这个过程是可控的，就实现了异步。</p>
 </blockquote>
-<p>  <strong>2、getInitialState()</strong>  </p>
+<p><strong>2、subscribe：</strong></p>
 <blockquote>
-<p>在使用es6的class语法时是没有这个钩子函数的，可以直接在constructor中定义this.state。此时可以访问this.props。</p>
+<p>监听state的变化——这个函数在store调用dispatch时会注册一个listener监听state变化，当我们需要知道state是否变化时可以调用，它返回一个函数，调用这个返回的函数可以注销监听。<br>let unsubscribe = store.subscribe(() =&gt; {console.log(‘state发生了变化’)})</p>
 </blockquote>
-<p> <strong>3、componentWillMount()</strong></p>
+<p><strong>3、getState：</strong></p>
 <blockquote>
-<p>组件初始化时只调用，以后组件更新不调用，整个生命周期只调用一次，此时可以修改state。</p>
+<p>获取store中的state——当我们用action触发reducer改变了state时，需要再拿到新的state里的数据，毕竟数据才是我们想要的。getState主要在两个地方需要用到，一是在dispatch拿到action后store需要用它来获取state里的数据，并把这个数据传给reducer，这个过程是自动执行的，二是在我们利用subscribe监听到state发生变化后调用它来获取新的state数据，如果做到这一步，说明我们已经成功了。</p>
 </blockquote>
-<p> <strong>4、 render()</strong></p>
+<p><strong>4、replaceReducer:</strong></p>
 <blockquote>
-<p> react最重要的步骤，创建虚拟dom，进行diff算法，更新dom树都在此进行。此时就不能更改state了。</p>
+<p>替换reducer，改变state修改的逻辑。</p>
 </blockquote>
-<p> <strong>5、componentDidMount()</strong></p>
+<p>store可以通过createStore()方法创建，接受三个参数，经过combineReducers合并的reducer和state的初始状态以及改变dispatch的中间件，后两个参数并不是必须的。store的主要作用是将action和reducer联系起来并改变state。</p>
+<p><strong>action:</strong></p>
 <blockquote>
-<p>组件渲染之后调用，可以通过this.getDOMNode()获取和操作dom节点，只调用一次。</p>
+<p>action是一个对象，其中type属性是必须的，同时可以传入一些数据。action可以用actionCreactor进行创造。dispatch就是把action对象发送出去。</p>
 </blockquote>
-<p><strong>在更新时也会触发5个钩子函数：</strong></p>
-<p>  <strong>6、componentWillReceivePorps(nextProps)</strong></p>
+<p><strong>reducer:</strong></p>
 <blockquote>
-<p>组件初始化时不调用，组件接受新的props时调用。</p>
+<p>reducer是一个函数，它接受一个state和一个action，根据action的type返回一个新的state。根据业务逻辑可以分为很多个reducer，然后通过combineReducers将它们合并，state树中有很多对象，每个state对象对应一个reducer，state对象的名字可以在合并时定义。</p>
 </blockquote>
-<p>  <strong>7、shouldComponentUpdate(nextProps, nextState)</strong></p>
+<p>像这个样子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> reducer = combineReducers(&#123;</div><div class="line">     a: doSomethingWithA,</div><div class="line">     b: processB,</div><div class="line">     c: c</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p><strong>combineReducers:</strong></p>
 <blockquote>
-<p>react性能优化非常重要的一环。组件接受新的state或者props时调用，我们可以设置在此对比前后两个props和state是否相同，如果相同则返回false阻止更新，因为相同的属性状态一定会生成相同的dom树，这样就不需要创造新的dom树和旧的dom树进行diff算法对比，节省大量性能，尤其是在dom结构复杂的时候。不过调用this.forceUpdate会跳过此步骤。</p>
+<p>其实它也是一个reducer，它接受整个state和一个action，然后将整个state拆分发送给对应的reducer进行处理，所有的reducer会收到相同的action，不过它们会根据action的type进行判断，有这个type就进行处理然后返回新的state，没有就返回默认值，然后这些分散的state又会整合在一起返回一个新的state树。</p>
 </blockquote>
-<p>  <strong>8、componentWillUpdate(nextProps, nextState)</strong></p>
+<p>接下来分析一下整体的流程，首先调用store.dispatch将action作为参数传入，同时用getState获取当前的状态树state并注册subscribe的listener监听state变化，再调用combineReducers并将获取的state和action传入。combineReducers会将传入的state和action传给所有reducer，并根据action的type返回新的state，触发state树的更新，我们调用subscribe监听到state发生变化后用getState获取新的state数据。</p>
+<p>redux的state和react的state两者完全没有关系，除了名字一样。</p>
+<p><strong>上面分析了redux的主要功能，那么react-redux到底做了什么？</strong></p>
+<h2 id="React-Redux"><a href="#React-Redux" class="headerlink" title="React-Redux"></a>React-Redux</h2><p>如果只使用redux，那么流程是这样的：</p>
 <blockquote>
-<p>组件初始化时不调用，只有在组件将要更新时才调用，此时可以修改state</p>
+<p>component –&gt; dispatch(action) –&gt; reducer –&gt; subscribe –&gt; getState –&gt; component</p>
 </blockquote>
-<p>  <strong>9、render()</strong></p>
+<p>用了react-redux之后流程是这样的：</p>
 <blockquote>
-<p>不多说</p>
+<p>component –&gt; actionCreator(data) –&gt; reducer –&gt; component</p>
 </blockquote>
-<p>  <strong>10、componentDidUpdate()</strong></p>
+<p>store的三大功能：dispatch，subscribe，getState都不需要手动来写了。react-redux帮我们做了这些，同时它提供了两个好基友Provider和connect。</p>
+<p><strong>Provider</strong>是一个组件，它接受store作为props，然后通过context往下传，这样react中任何组件都可以通过context获取store。也就意味着我们可以在任何一个组件里利用dispatch(action)来触发reducer改变state，并用subscribe监听state的变化，然后用getState获取变化后的值。但是并不推荐这样做，它会让数据流变的混乱，过度的耦合也会影响组件的复用，维护起来也更麻烦。</p>
+<p><strong>connect –connect(mapStateToProps, mapDispatchToProps, mergeProps, options)</strong> 是一个函数，它接受四个参数并且再返回一个函数–wrapWithConnect，wrapWithConnect接受一个组件作为参数wrapWithConnect(component)，它内部定义一个新组件Connect(容器组件)并将传入的组件(ui组件)作为Connect的子组件然后return出去。</p>
+<p>所以它的完整写法是这样的：connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(component)</p>
+<p><strong>mapStateToProps(state, [ownProps])：</strong></p>
 <blockquote>
-<p>组件初始化时不调用，组件更新完成后调用，此时可以获取dom节点。</p>
+<p>mapStateToProps 接受两个参数，store的state和自定义的props，并返回一个新的对象，这个对象会作为props的一部分传入ui组件。我们可以根据组件所需要的数据自定义返回一个对象。ownProps的变化也会触发mapStateToProps</p>
 </blockquote>
-<p>还有一个卸载钩子函数</p>
-<p>  <strong>11、componentWillUnmount()</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">mapStateToProps</span>(<span class="params">state</span>) </span>&#123;</div><div class="line">   <span class="keyword">return</span> &#123; <span class="attr">todos</span>: state.todos &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>mapDispatchToProps(dispatch, [ownProps])：</strong></p>
 <blockquote>
-<p>组件将要卸载时调用，一些事件监听和定时器需要在此时清除。</p>
+<p>mapDispatchToProps如果是对象，那么会和store绑定作为props的一部分传入ui组件。如果是个函数，它接受两个参数，bindActionCreators会将action和dispatch绑定并返回一个对象，这个对象会和ownProps一起作为props的一部分传入ui组件。所以不论mapDispatchToProps是对象还是函数，它最终都会返回一个对象，如果是函数，这个对象的key值是可以自定义的</p>
 </blockquote>
-<p>以上可以看出来react总共有10个周期函数（render重复一次），这个10个函数可以满足我们所有对组件操作的需求，利用的好可以提高开发效率和组件性能。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">mapDispatchToProps</span>(<span class="params">dispatch</span>) </span>&#123;</div><div class="line">   <span class="keyword">return</span> &#123;</div><div class="line">      todoActions: bindActionCreators(todoActionCreators, dispatch),</div><div class="line">      counterActions: bindActionCreators(counterActionCreators, dispatch)</div><div class="line">   &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>mapDispatchToProps返回的对象其属性其实就是一个个actionCreator，因为已经和dispatch绑定，所以当调用actionCreator时会立即发送action，而不用手动dispatch。ownProps的变化也会触发mapDispatchToProps。</p>
+<p><strong>mergeProps(stateProps, dispatchProps, ownProps)：</strong></p>
+<blockquote>
+<p>将mapStateToProps() 与 mapDispatchToProps()返回的对象和组件自身的props合并成新的props并传入组件。默认返回 Object.assign({}, ownProps, stateProps, dispatchProps) 的结果。</p>
+</blockquote>
+<p><strong>options：</strong></p>
+<blockquote>
+<p>pure = true 表示Connect容器组件将在shouldComponentUpdate中对store的state和ownProps进行浅对比，判断是否发生变化，优化性能。为false则不对比。</p>
+</blockquote>
+<p>其实connect函数并没有做什么，大部分的逻辑都是在它返回的wrapWithConnect函数内实现的，确切的说是在wrapWithConnect内定义的Connect组件里实现的。</p>
 
       
     </div>
@@ -393,13 +420,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2017/10/21/react-lifecycle/">React Lifecycle</a></p>
+        <p><span>Title:</span><a href="/2017/12/03/Redux/">Redux</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">sugar</a></p>
-        <p><span>Created:</span>2017-10-21, 21:56:54</p>
-        <p><span>Updated:</span>2017-12-30, 18:53:47</p>
+        <p><span>Created:</span>2017-12-03, 19:05:19</p>
+        <p><span>Updated:</span>2017-12-30, 19:37:58</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/10/21/react-lifecycle/" title="React Lifecycle">http://sugarac.com/2017/10/21/react-lifecycle/</a>
-            <span class="copy-path" data-clipboard-text="From http://sugarac.com/2017/10/21/react-lifecycle/　　By sugar" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/12/03/Redux/" title="Redux">http://sugarac.com/2017/12/03/Redux/</a>
+            <span class="copy-path" data-clipboard-text="From http://sugarac.com/2017/12/03/Redux/　　By sugar" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -412,15 +439,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/11/30/React-Summary/">
-                    React Summary
+                <a href="/2017/12/05/react--redux--react/">
+                    react -&gt; redux -&gt; react
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/07/08/LeetCode 1. Two Sum/">
-                    LeetCode 1. Two Sum
+                <a href="/2017/12/01/React-Router/">
+                    React-Router
                 </a>
             </div>
         
@@ -432,7 +459,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#流程是这个样子的："><span class="toc-number">1.</span> <span class="toc-text">流程是这个样子的：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接下来具体分析一下，redux以及react-redux到底是怎么实现的。"><span class="toc-number">2.</span> <span class="toc-text">接下来具体分析一下，redux以及react-redux到底是怎么实现的。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#先说说redux："><span class="toc-number"></span> <span class="toc-text">先说说redux：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#redux主要由三部分组成：store，reducer，action。"><span class="toc-number">1.</span> <span class="toc-text">redux主要由三部分组成：store，reducer，action。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Redux"><span class="toc-number"></span> <span class="toc-text">React-Redux</span></a>
         
     </div>
     <style>
@@ -468,7 +495,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"React Lifecycle　| sugar, Focus on Frontend，Android　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Redux　| sugar, Focus on Frontend，Android　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -487,8 +514,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://sugarac.com/2017/10/21/react-lifecycle/';
-            this.page.identifier = '2017/10/21/react-lifecycle/';
+            this.page.url = 'http://sugarac.com/2017/12/03/Redux/';
+            this.page.identifier = '2017/12/03/Redux/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -510,7 +537,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/11/30/React-Summary/" title="Pre: React Summary">
+            <a href="/2017/12/05/react--redux--react/" title="Pre: react -&gt; redux -&gt; react">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -518,7 +545,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/07/08/LeetCode 1. Two Sum/" title="Next: LeetCode 1. Two Sum">
+            <a href="/2017/12/01/React-Router/" title="Next: React-Router">
                 <i class="fa fa-angle-right"></i>
             </a>
         
