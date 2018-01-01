@@ -3,6 +3,26 @@
   
     
     <entry>
+      <title><![CDATA[自定义Hexo博客首页]]></title>
+      <url>/blog/2018/01/01/customize-Hexo-blog-homepage/</url>
+      <content type="html"><![CDATA[<p>因为想做个网页展示个人项目给HR看，增加简历通过机会。┑(￣Д ￣)┍<br>所以就想着把<a href="sugarac.com">sugarac.com</a>改为项目展示页面，<a href="sugarac.com/blog">sugarac.com/blog</a>作为博客<br>那么怎么实现呢？网上教程有一些，但是有问题，所以我自己写了个教程。<br>总体就两步，<a href="sugarac.com/blog">sugarac.com/blog</a>作为博客，<a href="sugarac.com">sugarac.com</a>改为项目展示页面。(╯‵□′)╯︵┻━┻<br>大象看了想打人，废话不多说，下面开始正文。</p>
+<a id="more"></a>
+<h3 id="新建一个repository"><a href="#新建一个repository" class="headerlink" title="新建一个repository"></a>新建一个repository</h3><p>名字随意，我的是blog。</p>
+<h3 id="修改hexo配置文件-config-yml"><a href="#修改hexo配置文件-config-yml" class="headerlink" title="修改hexo配置文件_config.yml"></a>修改hexo配置文件_config.yml</h3><p>将URL项中的url和root改为如下：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line"><span class="symbol">url:</span> <span class="symbol">http:</span>/<span class="regexp">/sugarac.com/blog</span>      （改这里）</div><div class="line"><span class="symbol">root:</span> /blog/                      （改这里）</div><div class="line"><span class="symbol">permalink:</span> <span class="symbol">:year/</span><span class="symbol">:month/</span><span class="symbol">:day/</span><span class="symbol">:title/</span></div><div class="line"><span class="symbol">permalink_defaults:</span></div></pre></td></tr></table></figure></p>
+<p>将Deployment项中的repo改成新的repository的clone地址<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># Deployment</span></div><div class="line"><span class="meta">## Docs: https:<span class="comment">//hexo.io/docs/deployment.html</span></span></div><div class="line"><span class="symbol">deploy:</span></div><div class="line"><span class="symbol">  type:</span> git</div><div class="line"><span class="symbol">  repo:</span> git@github.com:sugarac/blog.git （改这里）</div><div class="line"><span class="symbol">  branch:</span> master</div></pre></td></tr></table></figure></p>
+<h3 id="重新部署你的博客并打开GitHub-Pages功能"><a href="#重新部署你的博客并打开GitHub-Pages功能" class="headerlink" title="重新部署你的博客并打开GitHub Pages功能"></a>重新部署你的博客并打开GitHub Pages功能</h3><p>在gitbash上输入hexo g再输入hexo d，然后再GitHub的Settings中打开GitHub Pages功能。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 杂 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[React Lifecycle Demo]]></title>
       <url>/blog/2017/11/08/React-Lifecycle-Demo/</url>
       <content type="html"><![CDATA[<p>GitHub: <a href="https://github.com/sugarac/react-lifecycle-demo" target="_blank" rel="external">https://github.com/sugarac/react-lifecycle-demo</a><br><a id="more"></a></p>
@@ -86,7 +106,7 @@
     
     <entry>
       <title><![CDATA[react -> redux -> react]]></title>
-      <url>/blog/2017/11/05/react--redux--react/</url>
+      <url>/blog/2017/11/05/react-redux-react/</url>
       <content type="html"><![CDATA[<p>下面是一个完整的 react -&gt; redux -&gt; react 流程：<br><a id="more"></a></p>
 <p>一、Provider组件接受redux的store作为props，然后通过context往下传。</p>
 <p>二、connect函数在初始化的时候会将mapDispatchToProps对象绑定到store，如果mapDispatchToProps是函数则在Connect组件获得store后，根据传入的store.dispatch和action通过bindActionCreators进行绑定，再将返回的对象绑定到store，connect函数会返回一个wrapWithConnect函数，同时wrapWithConnect会被调用且传入一个ui组件，wrapWithConnect内部使用class Connect extends Component定义了一个Connect组件，传入的ui组件就是Connect的子组件，然后Connect组件会通过context获得store，并通过store.getState获得完整的state对象，将state传入mapStateToProps返回stateProps对象、mapDispatchToProps对象或mapDispatchToProps函数会返回一个dispatchProps对象，stateProps、dispatchProps以及Connect组件的props三者通过Object.assign()，或者mergeProps合并为props传入ui组件。然后在ComponentDidMount中调用store.subscribe，注册了一个回调函数handleChange监听state的变化。</p>
