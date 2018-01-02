@@ -15,18 +15,16 @@
 
 
 
-<meta name="description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
-<meta name="keywords" content="LeetCode">
-<meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 1. Two Sum">
-<meta property="og:url" content="http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/index.html">
+<meta name="description" content="My Conquest Is the Sea of Stars!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="sugar, Focus on Frontend, Android">
+<meta property="og:url" content="http://sugarac.com/archives/2017/01/index.html">
 <meta property="og:site_name" content="sugar, Focus on Frontend, Android">
-<meta property="og:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
+<meta property="og:description" content="My Conquest Is the Sea of Stars!">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-31T03:01:53.632Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 1. Two Sum">
-<meta name="twitter:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same e">
+<meta name="twitter:title" content="sugar, Focus on Frontend, Android">
+<meta name="twitter:description" content="My Conquest Is the Sea of Stars!">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>LeetCode 1. Two Sum | sugar, Focus on Frontend, Android</title>
+<title>Archives: 2017/1 | sugar, Focus on Frontend, Android</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -68,8 +66,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
-        isArchive: false,
+        isPost: false,
+        isArchive: true,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -271,199 +269,56 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-LeetCode 1. Two Sum" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="sugarac.com/2017/07/08/LeetCode 1. Two Sum/" class="article-date">
-      <time datetime="2017-07-08T07:00:00.000Z" itemprop="datePublished">2017-07-08</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="sugarac.com/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="sugarac.com/2017/01/01/customize-Hexo-blog-homepage/" class="archive-article-date">
+      <time datetime="2017-01-01T22:55:57.000Z" itemprop="datePublished">01-01</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      LeetCode 1. Two Sum
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="sugarac.com/2017/01/01/customize-Hexo-blog-homepage/">自定义Hexo博客首页</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="sugarac.com/tags/LeetCode/">LeetCode</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
-<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the same element twice.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,</div><div class="line"></div><div class="line">Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,</div><div class="line">return [<span class="number">0</span>, <span class="number">1</span>].</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="Solution-1-HashMap-O-n-O-n"><a href="#Solution-1-HashMap-O-n-O-n" class="headerlink" title="Solution 1: HashMap O(n); O(n)"></a>Solution 1: HashMap O(n); O(n)</h3><p>Build a HashMap between number and its index.<br>For each number n in the array, check if target - n exists in map.<br>If exists, return the indices, otherwise, put n and its index into map.<br>Return {-1, -1} if not found.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</div><div class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (map.containsKey(target - nums[i])) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(target - nums[i]), i&#125;;</div><div class="line">        &#125;</div><div class="line">        map.put(nums[i], i);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, - <span class="number">1</span>&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>Title:</span><a href="sugarac.com/2017/07/08/LeetCode 1. Two Sum/">LeetCode 1. Two Sum</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">sugar</a></p>
-        <p><span>Created:</span>2017-07-08, 00:00:00</p>
-        <p><span>Updated:</span>2017-12-30, 19:01:53</p>
-        <p>
-            <span>Full URL:</span><a class="post-url" href="sugarac.com/2017/07/08/LeetCode 1. Two Sum/" title="LeetCode 1. Two Sum">http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/</a>
-            <span class="copy-path" data-clipboard-text="From http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/　　By sugar" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
-        </p>
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="sugarac.com/tags/杂/">杂</a></li></ul>
     </div>
 
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="sugarac.com/2017/10/30/React-Summary/">
-                    React Summary
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="sugarac.com/2017/01/01/customize-Hexo-blog-homepage/">
-                    自定义Hexo博客首页
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Solution-1-HashMap-O-n-O-n"><span class="toc-number">1.</span> <span class="toc-text">Solution 1: HashMap O(n); O(n)</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
-
-    <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"LeetCode 1. Two Sum　| sugar, Focus on Frontend, Android　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-        <section id="comments">
-    <style> aside.comment-bar { margin: auto 30px; }</style>
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function(){
-            this.page.url = 'http://sugarac.com/2017/07/08/LeetCode 1. Two Sum/';
-            this.page.identifier = '2017/07/08/LeetCode 1. Two Sum/';
-        };
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = '//http-sugarac-com.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        }
-    </script>
-    
-    <script> loadComment(); </script>
-
-</section>
-
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="sugarac.com/2017/10/30/React-Summary/" title="Pre: React Summary">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="sugarac.com/2017/01/01/customize-Hexo-blog-homepage/" title="Next: 自定义Hexo博客首页">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="sugarac.com/2017/11/08/React-Lifecycle-Demo/">React Lifecycle Demo</a></li><li class="post-list-item"><a class="post-list-link" href="sugarac.com/2017/11/07/react-lifecycle/">React Lifecycle</a></li><li class="post-list-item"><a class="post-list-link" href="sugarac.com/2017/11/05/react-redux-react/">react -> redux -> react</a></li><li class="post-list-item"><a class="post-list-link" href="sugarac.com/2017/11/04/Redux/">Redux</a></li><li class="post-list-item"><a class="post-list-link" href="sugarac.com/2017/11/01/React-Router/">React-Router</a></li><li class="post-list-item"><a class="post-list-link" href="sugarac.com/2017/10/30/React-Summary/">React Summary</a></li><li class="post-list-item"><a class="post-list-link" href="sugarac.com/2017/07/08/LeetCode 1. Two Sum/">LeetCode 1. Two Sum</a></li><li class="post-list-item"><a class="post-list-link" href="sugarac.com/2017/01/01/customize-Hexo-blog-homepage/">自定义Hexo博客首页</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
