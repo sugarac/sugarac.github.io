@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[React Lifecycle Demo]]></title>
       <url>/2017/11/08/React-Lifecycle-Demo/</url>
-      <content type="html"><![CDATA[<p>GitHub: <a href="https://github.com/sugarac/react-lifecycle-demo" target="_blank" rel="external">https://github.com/sugarac/react-lifecycle-demo</a><br><a id="more"></a></p>
+      <content type="html"><![CDATA[<p>GitHub: <a href="https://github.com/sugarac/react-lifecycle-demo" target="_blank" rel="noopener">https://github.com/sugarac/react-lifecycle-demo</a><br><a id="more"></a></p>
 <h2 id="Component-Lifecycle-Creation"><a href="#Component-Lifecycle-Creation" class="headerlink" title="Component Lifecycle - Creation"></a>Component Lifecycle - Creation</h2><p><img src="/img/Component Lifecycle - Creation.png" width="700"></p>
 <h2 id="Component-Lifecycle-–-Update-triggered-by-Parent"><a href="#Component-Lifecycle-–-Update-triggered-by-Parent" class="headerlink" title="Component Lifecycle – Update (triggered by Parent)"></a>Component Lifecycle – Update (triggered by Parent)</h2><p><img src="/img/Component Lifecycle – Update (triggered by Parent).png" width="700"></p>
 <h2 id="Component-Lifecycle-–-Update-triggered-by-Internal-Change"><a href="#Component-Lifecycle-–-Update-triggered-by-Internal-Change" class="headerlink" title="Component Lifecycle – Update (triggered by Internal Change)"></a>Component Lifecycle – Update (triggered by Internal Change)</h2><p><img src="/img/Component Lifecycle – Update (triggered by Internal Change).png" width="700"></p>
@@ -300,9 +300,9 @@
       <title><![CDATA[好博文汇总]]></title>
       <url>/2017/01/01/%E5%A5%BD%E5%8D%9A%E6%96%87%E6%B1%87%E6%80%BB/</url>
       <content type="html"><![CDATA[<ol>
-<li><a href="https://coolshell.cn/articles/17583.html" target="_blank" rel="external">技术人员的发展之路</a><a id="more"></a></li>
-<li><a href="https://coolshell.cn/articles/10688.html" target="_blank" rel="external">编程能力与编程年龄</a></li>
-<li><a href="https://coolshell.cn/articles/8790.html" target="_blank" rel="external">程序算法与人生选择</a></li>
+<li><a href="https://coolshell.cn/articles/17583.html" target="_blank" rel="noopener">技术人员的发展之路</a><a id="more"></a></li>
+<li><a href="https://coolshell.cn/articles/10688.html" target="_blank" rel="noopener">编程能力与编程年龄</a></li>
+<li><a href="https://coolshell.cn/articles/8790.html" target="_blank" rel="noopener">程序算法与人生选择</a></li>
 </ol>
 ]]></content>
       
